@@ -6,7 +6,7 @@ import Layout from './components/Layout';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/Feedback-Form-Frontend">
       <Layout>
       <Routes>
         <Route path="/" element={<LoginForm />} /> 
