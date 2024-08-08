@@ -3,11 +3,11 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 64px; /* Height of the header */
-    padding-bottom: 60px; /* Adjust based on footer height */
+    padding-top: 64px; 
+    /* padding-bottom: 60px;  */
   }
   
   .main-content {
     flex: 1;
-    margin-top: 50px; /* Adjust this value to set the spacing between header and content if needed */
+    /* margin-top: 50px;  */
   }

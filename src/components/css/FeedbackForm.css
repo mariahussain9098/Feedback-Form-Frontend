@@ -1,0 +1,235 @@
+
+/* .container {
+    max-width: 80%;
+    margin: auto;
+  }
+  
+  .form-heading {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .form-control,
+  .form-select {
+    border-radius: 10px;
+    border: 2px solid #007bff;
+    padding: 10px;
+  }
+  
+  textarea.form-control {
+    resize: none;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .mb-4 {
+    margin-bottom: 2rem !important;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(45deg, #6b8cff, #007bff);
+    border: none;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+   */
+
+
+
+
+
+
+
+
+
+   /* input, select, textarea {
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: #77E4C8; 
+    box-shadow: 0 0 5px rgba(119, 228, 200, 0.5);
+  } */
+
+
+
+
+  /* .custom-select, .custom-input, .custom-textarea {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-select:focus, .custom-input:focus, .custom-textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .dropdown-arrow {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: #6c757d;
+  }
+   */
+
+
+
+
+
+
+
+
+   .custom-select, .custom-input, .custom-textarea {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+    font-size: 1.2rem; 
+  }
+  
+  .custom-select:focus, .custom-input:focus, .custom-textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .react-select {
+    margin-bottom: 1.5rem; 
+  }
+  
+  .select__control {
+    border-radius: 5px;
+    border-color: #ced4da;
+  }
+  
+  .select__control:hover {
+    border-color: #007bff; 
+  }
+  
+  .select__control--is-focused {
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  .radio{
+    font-size: 1.5rem;
+    padding-right: 100px;
+  }
+ 
+
+  body {
+    background-color: #f0f8ff;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .star {
+    cursor: pointer;
+    margin-right: 40px;
+    transition: color 0.2s;
+    font-size: 3.5rem;
+  }
+
+  .star:hover {
+    box-shadow: 0px 0px 20px rgb(223, 222, 222) !important;
+    border-radius: 5%;
+  }
+  
+  .custom-input {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+  }
+  
+  .custom-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .react-select {
+    margin-bottom: 1rem;
+  }
+  
+  .react-select .select__control {
+    border-radius: 5px;
+    border-color: #ced4da;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .react-select .select__option:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+
+
+
+/* Style for the range input container */
+.range-input-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+/* Custom styling for the range input */
+.range-input {
+  -webkit-appearance: none; 
+  width: 100%;
+  height: 10px; /* Height of the track */
+  border-radius: 5px; /* Rounded corners */
+  background: linear-gradient(to right, #2a8b94 0%, #36C2CE var(--value), #b5b4b4 var(--value), #b5b4b4 100%); 
+  /* background: #148d98; */
+  outline: none; /* Remove outline */
+  transition: background 0.2s; /* Smooth transition */
+}
+
+/* Custom thumb styling */
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none; /* Remove default appearance */
+  width: 20px; /* Width of the thumb */
+  height: 20px; /* Height of the thumb */
+  border-radius: 50%; /* Circular thumb */
+  /* background: #4535C1;  */
+  background-color: #148d98;
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); /* Shadow for the thumb */
+}
+
+.range-input::-moz-range-thumb {
+  width: 20px; /* Width of the thumb */
+  height: 20px; /* Height of the thumb */
+  border-radius: 50%; /* Circular thumb */
+  background: #4535C1; /* Thumb color */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); /* Shadow for the thumb */
+}
+
+/* Additional styles for the range input */
+.range-input:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+/* Hide the default track styling in Firefox */
+.range-input::-moz-range-track {
+  height: 10px; /* Height of the track */
+  border-radius: 5px; /* Rounded corners */
+  background: #ccc; /* Default background color */
+}
+
+/* Add a custom style for the value display */
+.range-value {
+  position: absolute;
+  top: 65px; /* Position above the track */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Centering */
+  font-weight: bold; /* Bold text */
+  color: #2a8b94; /* Color for the value */
+}

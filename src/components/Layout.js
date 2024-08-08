@@ -1,22 +1,3 @@
-// import React from 'react';
-// import Header from './Header'; 
-// import Footer from './Footer'; // Adjust the path as necessary
-
-// const Layout = ({ children }) => {
-//   return (
-//     <div>
-//       <Header />
-//       <main>{children}</main>
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default Layout;
-
-
-
-
 import React from 'react';
 import Header from './Header'; // Adjust the path as necessary
 import Footer from './Footer'; // Adjust the path as necessary
