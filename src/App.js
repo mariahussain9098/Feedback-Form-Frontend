@@ -9,7 +9,7 @@ import AdminDashboard from './components/AdminDashboard';
 
 const App = () => {
   return (
-    <Router basename="/Feedback-Form-Frontend">
+    <Router basename="/">
       <Layout>
       <Routes>
         <Route path="/" element={<LoginForm />} /> 
