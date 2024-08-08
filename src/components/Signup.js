@@ -3230,8 +3230,7 @@ const Signup = () => {
 
       try {
         // API call to the backend for signup
-        const response = await axios.post('https://feedback-form-backend.vercel.app/', {
-          // const response = await axios.post('http://localhost:3000/api/signup', {
+          const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/signup`, {
           studentId: values.studentId,
           firstName: values.firstName,
           lastName: values.lastName,
