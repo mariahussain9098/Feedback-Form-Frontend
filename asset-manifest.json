@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Feedback-Form-Frontend/static/css/main.a007040a.css",
-    "main.js": "/Feedback-Form-Frontend/static/js/main.deb3bbde.js",
+    "main.css": "/Feedback-Form-Frontend/static/css/main.212ee2d8.css",
+    "main.js": "/Feedback-Form-Frontend/static/js/main.7b093bfe.js",
     "static/js/453.daa1c0d1.chunk.js": "/Feedback-Form-Frontend/static/js/453.daa1c0d1.chunk.js",
     "index.html": "/Feedback-Form-Frontend/index.html",
-    "main.a007040a.css.map": "/Feedback-Form-Frontend/static/css/main.a007040a.css.map",
-    "main.deb3bbde.js.map": "/Feedback-Form-Frontend/static/js/main.deb3bbde.js.map",
+    "main.212ee2d8.css.map": "/Feedback-Form-Frontend/static/css/main.212ee2d8.css.map",
+    "main.7b093bfe.js.map": "/Feedback-Form-Frontend/static/js/main.7b093bfe.js.map",
     "453.daa1c0d1.chunk.js.map": "/Feedback-Form-Frontend/static/js/453.daa1c0d1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a007040a.css",
-    "static/js/main.deb3bbde.js"
+    "static/css/main.212ee2d8.css",
+    "static/js/main.7b093bfe.js"
   ]
 }
