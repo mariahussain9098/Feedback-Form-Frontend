@@ -3186,7 +3186,11 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Box, Grid, TextField, Button, Typography, MenuItem, CircularProgress } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'; // Import axios for API requests
+import axios from 'axios'; 
+const apiUrl = process.env.REACT_APP_API_URL;
+
+console.log('API URL:', apiUrl);
+
 
 const Signup = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -3230,7 +3234,8 @@ const Signup = () => {
 
       try {
         // API call to the backend for signup
-          const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/signup`, {
+          // const response = await axios.post(`${apiUrl}/students/signup`, {
+        const response = await axios.post(`http://localhost:3000/students/signup/`, {
           studentId: values.studentId,
           firstName: values.firstName,
           lastName: values.lastName,
@@ -3239,7 +3244,7 @@ const Signup = () => {
           batch: values.batch,
           course: values.course,
         });
-
+        console.log('response:',response)
         // Handle successful signup
         if (response.status === 201) {
           navigate('/login'); // Redirect on success
