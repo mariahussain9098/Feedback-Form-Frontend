@@ -62,15 +62,16 @@ The backend code for the Student Feedback Portal can be found at: [GitHub - Stud
 
 ## Screenshots
 
-![1](screenshots/1.PNG)
-![2](screenshots/2.PNG)
-![3](screenshots/3.PNG)
-![4](screenshots/4.PNG)
-![5](screenshots/5.PNG)
-![6](screenshots/6.PNG)
-![7](screenshots/7.PNG)
-![8](screenshots/8.PNG)
-![9](screenshots/9.PNG)
+<img width="949" alt="1" src="https://github.com/user-attachments/assets/97ed452d-9e38-47e3-adaf-1e22cd57ace6">
+<img width="915" alt="2" src="https://github.com/user-attachments/assets/9bac0e78-0ee1-44b6-92ae-8358df7b0460">
+<img width="951" alt="3" src="https://github.com/user-attachments/assets/e75f86cc-ff4a-47fa-a30a-262d4df9a9d0">
+<img width="960" alt="4" src="https://github.com/user-attachments/assets/b0f62c4c-421f-4b7d-9829-18b5d03b5e05">
+<img width="948" alt="5" src="https://github.com/user-attachments/assets/1cecfe4f-c0fe-4b67-97a8-d92a60f8b2f9">
+<img width="950" alt="6" src="https://github.com/user-attachments/assets/49770214-5f0e-4246-89e3-ddc5a9a45efa">
+<img width="950" alt="7" src="https://github.com/user-attachments/assets/4d2503af-d9a5-4b26-8223-4522591145a6">
+<img width="951" alt="8" src="https://github.com/user-attachments/assets/4d10fe1d-a3bb-448e-bfb1-188b8a55b2bc">
+<img width="940" alt="9" src="https://github.com/user-attachments/assets/1282dd71-ce34-4f47-b5a2-930a3acbf04e">
+
 
 
 Group name:
