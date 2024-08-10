@@ -48,8 +48,56 @@ const Signup = () => {
       setEmailExists(false);
       setErrorMessage(''); 
 
+      // try {
+      //   // API call to the backend for signup
+      //   const response = await fetch(`https://feedback-form-backend.vercel.app/students`, {
+      //     method: 'POST',
+      //     headers: {
+      //       'Content-Type': 'application/json',
+      //     },
+      //     body: JSON.stringify({
+      //       studentId: values.studentId,
+      //       firstName: values.firstName,
+      //       lastName: values.lastName,
+      //       email: values.email,
+      //       password: values.password,
+      //       confirmPassword: values.confirmPassword,
+      //       batch: values.batch,
+      //       course: values.course,
+      //     }),
+      //   });
+
+      //   // Log the response for debugging
+      //   const data = await response.json();
+      //   console.log('Response Data:', data);
+
+
+      //   if (!response.ok) {
+      //     const data = await response.json();
+      //     let combinedMessage = '';
+
+      //     if (data.message.includes("Student ID already exists")) {
+      //       setStudentExists(true);
+      //       combinedMessage += 'Student ID already exists. ';
+      //     }
+      //     if (data.message.includes("Email already exists")) {
+      //       setEmailExists(true);
+      //       combinedMessage += 'Email already exists. ';
+      //     }
+
+      //     setErrorMessage(combinedMessage.trim() || 'Validation error occurred.');
+      //   } else {
+      //     navigate('/'); // Redirect on success
+      //   }
+      // } catch (error) {
+      //   setErrorMessage('Network error. Please check your connection.');
+      // } finally {
+      //   setIsSubmitting(false); 
+      // }
+
+
+
       try {
-        // API call to the backend for signup
         const response = await fetch(`https://feedback-form-backend.vercel.app/students`, {
           method: 'POST',
           headers: {
@@ -66,16 +114,11 @@ const Signup = () => {
             course: values.course,
           }),
         });
-
-        // Log the response for debugging
-        const data = await response.json();
-        console.log('Response Data:', data);
-
-
+      
         if (!response.ok) {
           const data = await response.json();
+          // Handle specific error messages
           let combinedMessage = '';
-
           if (data.message.includes("Student ID already exists")) {
             setStudentExists(true);
             combinedMessage += 'Student ID already exists. ';
@@ -84,23 +127,22 @@ const Signup = () => {
             setEmailExists(true);
             combinedMessage += 'Email already exists. ';
           }
-
           setErrorMessage(combinedMessage.trim() || 'Validation error occurred.');
         } else {
+          // Successful response handling
           navigate('/'); // Redirect on success
         }
       } catch (error) {
+        console.error('Fetch error:', error); // Log the error for debugging
         setErrorMessage('Network error. Please check your connection.');
       } finally {
         setIsSubmitting(false); 
       }
+      
     },
   });
 
-  const 
-  
-  
-  handleClear = () => {
+  const handleClear = () => {
     formik.resetForm();
   };
 

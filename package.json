@@ -2,6 +2,7 @@
   "name": "feedback-form-frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://feedback-form-backend.vercel.app/",
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
