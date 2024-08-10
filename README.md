@@ -49,6 +49,8 @@ The backend code for the Student Feedback Portal can be found at: [GitHub - Stud
 ## Video Tutorial
 
 [signup](https://drive.google.com/file/d/1YrmKvBm8X4dyHlyyhnAWtZKaSCjfAq1N/view?usp=drive_link)
+[login_feedback][https://drive.google.com/file/d/1srN5YrxRMt0wmgsNXtoW8I6FQVEsAiD5/view?usp=sharing]
+
 
 ## Screenshots
 
