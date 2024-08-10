@@ -1,126 +1,29 @@
-// import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import { Box, Typography, TextField, Button, Alert } from '@mui/material';
-
-// const LoginForm = () => {
-//   const [email, setEmail] = useState('');
-//   const [password, setPassword] = useState('');
-//   const [errors, setErrors] = useState({});
-//   const [submitted, setSubmitted] = useState(false);
-//   const navigate = useNavigate();
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     const validationErrors = {};
-
-//     if (!email) {
-//       validationErrors.email = 'Email is required';
-//     }
-//     if (!password) {
-//       validationErrors.password = 'Password is required';
-//     }
-
-//     if (Object.keys(validationErrors).length > 0) {
-//       setErrors(validationErrors);
-//     } else {
-//       setErrors({});
-//       setSubmitted(true);
-//       // handle form submission and redirect to FeedbackForm
-//       navigate('/feedback-form'); // Adjust the path based on your routing setup
-//     }
-//   };
-
-//   return (
-//     <Box
-//       sx={{
-//         width: '100%',
-//         maxWidth: '500px',
-//         margin: '80px auto 0', // Added margin-top for spacing from the top
-//         padding: '20px',
-//         backgroundColor: '#f9f9f9',
-//         borderRadius: '8px',
-//         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-//       }}
-//     >
-//       <Typography
-//         variant="h4"
-//         sx={{
-//           textAlign: 'center',
-//           marginBottom: '20px',
-//           background: 'linear-gradient(to right, #4535C1, #36C2CE)', // Gradient color for heading
-//           WebkitBackgroundClip: 'text',
-//           WebkitTextFillColor: 'transparent',
-//         }}
-//       >
-//         Login Form
-//       </Typography>
-//       {submitted && (
-//         <Alert severity="success" sx={{ marginBottom: '20px' }}>
-//           The feedback summary is sent to your email address.
-//         </Alert>
-//       )}
-//       <form onSubmit={handleSubmit}>
-//         <TextField
-//           fullWidth
-//           label="Email"
-//           value={email}
-//           onChange={(e) => setEmail(e.target.value)}
-//           error={!!errors.email}
-//           helperText={errors.email}
-//           sx={{ marginBottom: '20px' }}
-//         />
-//         <TextField
-//           fullWidth
-//           label="Password"
-//           type="password"
-//           value={password}
-//           onChange={(e) => setPassword(e.target.value)}
-//           error={!!errors.password}
-//           helperText={errors.password}
-//           sx={{ marginBottom: '20px' }}
-//         />
-//         <Button
-//           type="submit"
-//           fullWidth
-//           variant="contained"
-//           sx={{
-//             background: 'linear-gradient(to right, #4535C1, #36C2CE)', // Gradient color for button
-//             '&:hover': {
-//               background: '#4535C1',
-//             },
-//           }}
-//         >
-//           Login
-//         </Button>
-//       </form>
-//     </Box>
-//   );
-// };
-
-// export default LoginForm;
-
-
-
-
-
-
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { Box, Typography, TextField, Button, Alert } from '@mui/material';
 
-const LoginForm = () => {
+const apiUrl = process.env.REACT_APP_API_URL;
+
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
-  const [submitted, setSubmitted] = useState(false);
+  const [loginError, setLoginError] = useState('');
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem('isAuthenticated');
+    if (isAuthenticated === 'true') {
+      navigate('/feedback-form');
+    }
+  }, [navigate]);
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = {};
 
@@ -139,9 +42,28 @@ const LoginForm = () => {
       setErrors(validationErrors);
     } else {
       setErrors({});
-      setSubmitted(true);
-      // handle form submission and redirect to FeedbackForm
-      navigate('/feedback-form');
+      try {
+        // Send login request to the server
+        const response = await fetch(`${apiUrl}/login`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          // Save authenticated status and navigate to the feedback form
+          localStorage.setItem('isAuthenticated', 'true');
+          navigate('/feedback-form');
+        } else {
+          setLoginError(data.message || 'Login failed');
+        }
+      } catch (error) {
+        setLoginError('An error occurred. Please try again.');
+      }
     }
   };
 
@@ -169,9 +91,9 @@ const LoginForm = () => {
       >
         Login Form
       </Typography>
-      {submitted && (
-        <Alert severity="success" sx={{ marginBottom: '20px' }}>
-          The feedback summary is sent to your email address.
+      {loginError && (
+        <Alert severity="error" sx={{ marginBottom: '20px' }}>
+          {loginError}
         </Alert>
       )}
       <form onSubmit={handleSubmit}>
@@ -208,8 +130,19 @@ const LoginForm = () => {
           Login
         </Button>
       </form>
+      <Typography variant="body2" sx={{ textAlign: 'center', marginTop: '20px' }}>
+        If you are an admin,{' '}
+        <Link to="/admin-login" style={{ color: '#4535C1' }}>
+          click here to login
+        </Link>
+        .
+      </Typography>
     </Box>
   );
 };
 
-export default LoginForm;
+export default Login;
+
+
+
+
