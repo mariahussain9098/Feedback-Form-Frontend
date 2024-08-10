@@ -8,6 +8,9 @@ The **Student Feedback Portal** is a web application built with the MERN stack (
   - Register and log in to the application.
   - Submit feedback for their courses.
   - View feedback submission confirmation.
+ 
+  - In Signup the Student Id Range must be SMIT101 - 10000
+  - In Feedback form fill all the fields, otherwise you get error.
 
 - **Admin Role:**
   - Log in with admin credentials.
@@ -69,3 +72,19 @@ The backend code for the Student Feedback Portal can be found at: [GitHub - Stud
 ![8](screenshots/8.PNG)
 ![9](screenshots/9.PNG)
 
+
+Group name:
+
+Code Crafters
+
+Members:
+
+Maira Hussain Afaf Afridi Nimra Shahid
+
+Teacher name:
+
+Iqra Naz
+
+Batch 10
+
+No seperate git hub repositories were made as we all worked together on the project.
