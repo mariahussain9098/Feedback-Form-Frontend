@@ -55,7 +55,7 @@ The backend code for the Student Feedback Portal can be found at: [GitHub - Stud
 
 [admin_login]         [https://drive.google.com/file/d/1FLBS1C1LWhQoYlkx_HPwuPzFJNxaVk2-/view?usp=sharing]
 
-[admin_dashboard]     [https://drive.google.com/file/d/1QRVgpq4EjwVHyMNT-_5oOOVkvB4Pzh5_/view?usp=sharing]
+[admin_dashboard]     [https://drive.google.com/file/d/1m6Oc7oRx6QST7bXJlg6Gvw3BsO-C3785/view?usp=sharing]
 
 
 
