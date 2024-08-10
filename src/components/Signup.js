@@ -4,9 +4,9 @@ import * as Yup from 'yup';
 import { Box, Grid, TextField, Button, Typography, MenuItem, CircularProgress } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
-const apiUrl = process.env.REACT_APP_API_URL;
+// const apiUrl = process.env.REACT_APP_API_URL;
 
-console.log('API URL:', apiUrl);
+// console.log('API URL:', apiUrl);
 
 const Signup = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,7 +50,7 @@ const Signup = () => {
 
       try {
         // API call to the backend for signup
-        const response = await fetch(`${apiUrl}/students`, {
+        const response = await fetch(`https://feedback-form-backend.vercel.app/students`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
