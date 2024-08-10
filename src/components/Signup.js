@@ -28,7 +28,7 @@ const Signup = () => {
     },
     validationSchema: Yup.object({
       studentId: Yup.string()
-        .matches(/^(SMIT|smit)[0-9]{3,5}$/i, "Invalid student ID format")
+        .matches(/^(SMIT|smit)[0-9]{3,5}$/i, "student Id must be between SMIT101 - SMIT10000")
         .required('Required'),
       firstName: Yup.string().required('Required'),
       lastName: Yup.string().required('Required'),
