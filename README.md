@@ -74,15 +74,12 @@ The backend code for the Student Feedback Portal can be found at: [GitHub - Stud
 
 
 Group name:
-
 Code Crafters
 
 Members:
-
-Maira Hussain Afaf Afridi Nimra Shahid
+Maira Hussain, Afaf Afridi, Nimra Shahid
 
 Teacher name:
-
 Iqra Naz
 
 Batch 10
