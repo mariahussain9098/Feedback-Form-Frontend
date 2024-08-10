@@ -43,3 +43,16 @@ This project was collaboratively developed by:
 ## Backend Repository
 The backend code for the Student Feedback Portal can be found at: [GitHub - Student Feedback Portal Backend](https://github.com/mariahussain9098/feedback-form-backend)
 
+
+## Screenshots
+
+[1](screenshots/1.PNG)
+[2](screenshots/2.PNG)
+[3](screenshots/3.PNG)
+[4](screenshots/4.PNG)
+[5](screenshots/5.PNG)
+[6](screenshots/6.PNG)
+[7](screenshots/7.PNG)
+[8](screenshots/8.PNG)
+[9](screenshots/9.PNG)
+
