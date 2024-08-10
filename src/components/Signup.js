@@ -46,7 +46,7 @@ const Signup = () => {
       setIsSubmitting(true);
       setStudentExists(false);
       setEmailExists(false);
-      setErrorMessage(''); // Reset error message
+      setErrorMessage(''); 
 
       try {
         // API call to the backend for signup
@@ -92,7 +92,7 @@ const Signup = () => {
       } catch (error) {
         setErrorMessage('Network error. Please check your connection.');
       } finally {
-        setIsSubmitting(false); // Reset submitting state
+        setIsSubmitting(false); 
       }
     },
   });
