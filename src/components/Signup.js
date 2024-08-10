@@ -281,9 +281,9 @@ const Signup = () => {
                 helperText={formik.touched.batch && formik.errors.batch}
                 margin="normal"
               >
-                <MenuItem value="Batch A">Batch A</MenuItem>
-                <MenuItem value="Batch B">Batch B</MenuItem>
-                <MenuItem value="Batch C">Batch C</MenuItem>
+                <MenuItem value="Batch One">Batch 1</MenuItem>
+                <MenuItem value="Batch Two">Batch 2</MenuItem>
+                <MenuItem value="Batch Three">Batch 3</MenuItem>
               </TextField>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -299,9 +299,9 @@ const Signup = () => {
                 helperText={formik.touched.course && formik.errors.course}
                 margin="normal"
               >
-                <MenuItem value="Course 1">Course 1</MenuItem>
-                <MenuItem value="Course 2">Course 2</MenuItem>
-                <MenuItem value="Course 3">Course 3</MenuItem>
+                <MenuItem value="Web Development">Web Development</MenuItem>
+                <MenuItem value="Graphic Designing">Graphic Designing</MenuItem>
+                <MenuItem value="Flutter Development">Flutter Development</MenuItem>
               </TextField>
             </Grid>
             <Grid item xs={12}>
@@ -336,3 +336,15 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
+
+
+
+
+
+
+
+
+
+
